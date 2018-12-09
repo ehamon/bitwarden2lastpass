@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+Icon=smiley-shape
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=bitwarden2lastpass;
+Encoding=UTF-8
+X-KDE-Priority=TopLevel
+
+
+[Desktop Action bitwarden2lastpass]
+Name=Convert bitwarden csvfile to lastpass csvfile
+Icon=utilities-terminal
+Exec=/home/ehamon/bin/bitwarden2lastpass.bash -i %F
