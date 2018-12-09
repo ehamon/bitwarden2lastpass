@@ -41,7 +41,7 @@ See the video [bitwarden2lastpass-kde-dolphin-integration.mp4](https://youtu.be/
            detect the last bitwarden exxport file in the current directory and convert it to a compatible lastpass export file.
            (same to 'bitwarden2lastpass.py -d .')
     bitwarden2lastpass.py -d <directory>
-           detect the last bitwarden exxport file in the directory <directory> and convert it to a compatible lastpass export file.
+           detect the last bitwarden export file in the directory <directory> and convert it to a compatible lastpass export file.
     bitwarden2lastpass.py -i <export-bitwarden-file>
            convert <export-bitwarden-file> to a compatible lastpass export file, in the same directory.
     bitwarden2lastpass.py -i <export-bitwarden-file> -o <export-lastpass-file>
