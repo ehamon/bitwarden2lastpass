@@ -1,23 +1,23 @@
 # Bitwarden2Lastpass.py
 
-**Bitwarden2Lastpass.py** is a free software (GNU GPL3 license) that allows to easily convert a CSV file exported from the password manager [Bitwarden](https://vault.bitwarden.com/) to a CSV file in[Lastpass] format (https://lastpass.com/).
+**Bitwarden2Lastpass.py** is a free software (GNU GPL3 license) that allows to easily convert a CSV file exported from the password manager [Bitwarden](https://vault.bitwarden.com/) to a CSV file in [Lastpass](https://lastpass.com/) format.
 
 # Installation
 * copy file '**bitwarden2lastpass.py**' in ~/local/bin or in /usr/local/bin (root is required in this case)
 
-# Dépendencies
+# Dependences
 
 * python 3.7
 * pip install csv errno getopt inspect ntpath os pathlib platform re logging sys
 
 
-# KDE integration
+# KDE Dolphin integration
 
 See the video [bitwarden2lastpass-kde-dolphin-integration.mp4](https://youtu.be/pdnUDLsNxMc)
 
 * Edit and adapt the files to your installation:
   * bitwarden2lastpass.bash
-  - bitwarden2lastpass.desktop
+  * bitwarden2lastpass.desktop
 * Copy *bitwarden2lastpass.bash* in *~/local/bin* or in */usr/local/bin*
 * run **kf5-config --path services** to determine repositories
       ~/.local/share/kservices5/ServiceMenus/
