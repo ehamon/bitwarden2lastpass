@@ -48,9 +48,9 @@ logger.addHandler(my_handler)
 class BitwardenCsvConverterToolbox:
     def __init__(self):
         self.bitwarden_data = []
-        self.bitwarden_firstline = "folder,favorite,type,name,notes,fields,login_uri,login_username,login_password,login_totp"
+        self.bitwarden_firstline = "folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp"
         self.bitwarden_header = ["bw_folder", "bw_favorite", "bw_type", "bw_name", "bw_notes", "bw_fields", 
-                "bw_login_uri", "bw_login_username", "bw_login_password", "bw_login_totp"]
+                "bw_reprompt", "bw_login_uri", "bw_login_username", "bw_login_password", "bw_login_totp"]
         self.lastpass_header  = ["url", "username", "password", "extra", "name", "grouping", "fav"]
         self.last_file_bitwarden_opened = ""
         self.last_file_lastpass_generated = ""
@@ -59,16 +59,16 @@ class BitwardenCsvConverterToolbox:
     def displaylog(self):
         for l in self.msg:
             print(l)
-    
+
     def logger_function_in(self, where_i_am):
         logger.info(F"enter in fct '{where_i_am}()'")
         #logger.info(F"enter in fct '{inspect.stack()[1][3].f_code.co_name}()'")
-        
+
 
     def logger_function_out(self, where_i_am):
         logger.info(F"exit from fct '{where_i_am}()'")
         #logger.info(F"exit from fct  '{inspect.stack()[0][3].f_code.co_name}()'")
-    
+
     def read_bitwarden_file(self, fullpathfile_csv):
         """Read the bitwarden file in memory."""
         self.logger_function_in(sys._getframe().f_code.co_name)
@@ -98,9 +98,9 @@ class BitwardenCsvConverterToolbox:
                 return False
             data = []
             for row in reader:
-                bw_folder, bw_favorite, bw_type, bw_name, bw_notes, bw_fields, bw_login_uri, \
+                bw_folder, bw_favorite, bw_type, bw_name, bw_notes, bw_fields, bw_reprompt, bw_login_uri, \
                 bw_login_username, bw_login_password, bw_login_totp = row
-                data.append([bw_folder, bw_favorite, bw_type, bw_name, bw_notes, bw_fields, bw_login_uri, 
+                data.append([bw_folder, bw_favorite, bw_type, bw_name, bw_notes, bw_fields, bw_reprompt, bw_login_uri,
                             bw_login_username, bw_login_password, bw_login_totp])
             file_r.close
             self.bitwarden_data = data
